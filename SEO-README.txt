@@ -1,6 +1,6 @@
 GOD DESIGN SEO setup
 
-Canonical site: https://github.com/humanexglobal-cpu/God-Design/
+Canonical site: https://humanexglobal-cpu.github.io/God-Design/
 Files included: robots.txt, sitemap.xml, 404.html, favicon.svg.
 Google Search Console verification is intentionally not included. Add your verification method yourself after deploying.
 After deployment, submit sitemap.xml in Google Search Console and use URL Inspection to request indexing.
