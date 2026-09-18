@@ -10,13 +10,14 @@
 :root{--ink:#101010;--paper:#f5f2eb;--lime:#c9f24a;--muted:#777;--line:#d9d5cc}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;width:100%;min-width:0}
 a{color:inherit;text-decoration:none}
 nav{position:fixed;z-index:50;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:18px 5vw;mix-blend-mode:difference;color:white}
 .navlogo{font-weight:900;letter-spacing:.16em;font-size:13px;flex:0 0 auto;white-space:nowrap}
 .navlinks{display:flex;align-items:center;justify-content:flex-end;gap:28px;font-size:12px;text-transform:uppercase;letter-spacing:.14em;min-width:0;max-width:calc(100vw - 150px);overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;flex:0 1 auto}
 .navlinks::-webkit-scrollbar{display:none}
 .navlinks a{flex:0 0 auto}
+.hero{min-height:100svh;display:grid;place-items:center;padding:120px 5vw 70px;position:relative;overflow:hidden;background:#111;color:white}
 .hero:before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 65% 35%,#334400 0,transparent 35%),radial-gradient(circle at 25% 80%,#292929 0,transparent 38%);animation:drift 12s ease-in-out infinite alternate}
 @keyframes drift{to{transform:scale(1.08) translate3d(2%, -2%,0)}}
 .hero-inner{position:relative;z-index:1;width:min(1200px,100%);text-align:center}
@@ -62,8 +63,11 @@ footer{padding:25px 5vw;border-top:1px solid var(--line);display:flex;justify-co
 .reveal.visible{opacity:1;transform:none}
 .cursor{position:fixed;width:18px;height:18px;border:1px solid #fff;border-radius:50%;pointer-events:none;z-index:100;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .2s,height .2s}
 @media(max-width:1050px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:800px){
- .navlinks{gap:12px;font-size:9px}
+ nav{padding:15px 4vw}
+ .navlogo{font-size:11px;letter-spacing:.13em}
+ .navlinks{gap:11px;font-size:8px;letter-spacing:.11em;max-width:calc(100vw - 105px);justify-content:flex-start}
  .grid{grid-template-columns:1fr 1fr}
  .split,.contact{grid-template-columns:1fr}
  .split > div{min-height:48vh}
@@ -71,7 +75,7 @@ footer{padding:25px 5vw;border-top:1px solid var(--line);display:flex;justify-co
  .section-head{display:block}
  .intro{margin-top:25px}
 }
-@media(max-width:520px){.grid{grid-template-columns:1fr}.navlinks a:nth-child(2){display:none}footer{display:block;line-height:2}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.navlogo{font-size:10px}.navlinks{font-size:7.5px;gap:10px;max-width:calc(100vw - 92px)}footer{display:block;line-height:2}}
 </style>
 
 <!-- GOD DESIGN SEO -->
