@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://github.com/humanexglobal-cpu/God-Design/sitemap.xml
